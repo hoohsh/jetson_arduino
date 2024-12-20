@@ -11,7 +11,8 @@ Jetson is a series of embedded computing boards developed by NVIDIA, designed fo
 ### Arduino
 Arduino is an open-source electronics platform known for its simplicity and versatility in building prototypes and small-scale embedded systems. It is often used for controlling sensors, actuators, and other hardware components in IoT and robotics projects.
 
-![image (3)](https://github.com/user-attachments/assets/3d5fa2ae-1986-4442-be24-03da00404c11)
+![image (2)](https://github.com/user-attachments/assets/54ff0e09-7142-4805-9c8b-9362f33be644)
+
 
 
 ---
