@@ -126,4 +126,4 @@ void loop() {
 ```
 
 #### Click the link below to view the experiments conducted using the Arduino code and their results!
-https://github.com/hoohsh/jetson_arduino/blob/main/arduino_excercise.md
+-> https://github.com/hoohsh/jetson_arduino/blob/main/arduino_excercise.md
