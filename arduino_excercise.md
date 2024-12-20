@@ -23,6 +23,7 @@ The carbonation strength of four different soft drinks was measured by comparing
   
   ![image](https://github.com/user-attachments/assets/c10b41c4-bce6-46fd-a8d3-21d484af2e96)
 
+- **Experiment Video**: https://youtu.be/WmNrj-KVs4I
 
 - **Results**:  
   The results were visualized as a bar chart for clarity:
