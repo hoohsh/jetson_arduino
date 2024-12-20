@@ -123,7 +123,7 @@ finally:
 ```
 
 #### Experiment Video:
-[Discord Alert System Video](https://github.com/user-attachments/assets/discord-alert.mp4)
+
 
 #### Results:
 - Sent alerts when CO2 exceeded thresholds (850 ppm, 1000 ppm).
