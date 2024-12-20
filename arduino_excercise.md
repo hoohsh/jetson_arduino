@@ -7,6 +7,10 @@ CO2 levels were measured for 1.5 hours during a lecture in a classroom. The grap
 
 ![image](https://github.com/user-attachments/assets/e13605d3-1ee2-4103-8263-664a4abd2b41)
 
+- In an empty room, CO2 levels remained stable at 700–900 ppm. However, levels increased significantly when people were present.
+- CO2 levels rose proportionally with the number of people in the room, but ventilation (10–20 minutes) caused a sharp decrease.
+- In high-density spaces, CO2 levels climbed back quickly after ventilation, indicating the need for longer ventilation times.
+
 ---
 
 ## 2. Measuring Carbonation Strength in Soft Drinks
@@ -14,11 +18,21 @@ CO2 levels were measured for 1.5 hours during a lecture in a classroom. The grap
 **Description**:  
 The carbonation strength of four different soft drinks was measured by comparing the change in CO2 levels. Each experiment lasted for 2 minutes, with the sensor positioned vertically at the can’s opening after it was opened.
 
-- **Experiment Video**:  
-- **Results**:  
-The results were visualized as a bar chart for clarity:
+- **Soft Drinks Used**:  
+  Coca-Cola, Coca-Cola Zero, Pepsi, and Pepsi Zero.
+  ![image](https://github.com/user-attachments/assets/c10b41c4-bce6-46fd-a8d3-21d484af2e96)
 
-![image](https://github.com/user-attachments/assets/1f749428-d594-4aba-8156-0264e5bb9083)
+
+- **Results**:  
+  The results were visualized as a bar chart for clarity:
+
+  ![image](https://github.com/user-attachments/assets/1f749428-d594-4aba-8156-0264e5bb9083)
+
+  Based on the results, the CO2 change was observed in the following order:  
+  **Coca-Cola Zero > Pepsi > Coca-Cola > Pepsi Zero**.  
+
+  This indicates that **Coca-Cola Zero** has the highest carbonation strength among the tested drinks.
+
 
 
 ---
