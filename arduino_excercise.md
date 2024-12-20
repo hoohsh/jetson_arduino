@@ -20,6 +20,7 @@ The carbonation strength of four different soft drinks was measured by comparing
 
 - **Soft Drinks Used**:  
   Coca-Cola, Coca-Cola Zero, Pepsi, and Pepsi Zero.
+  
   ![image](https://github.com/user-attachments/assets/c10b41c4-bce6-46fd-a8d3-21d484af2e96)
 
 
