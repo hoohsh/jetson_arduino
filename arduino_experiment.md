@@ -138,7 +138,7 @@ finally:
         print("[센서] 시리얼 포트 닫힘")
 ```
 
-#### Experiment Video:
+#### Experiment Video: https://youtu.be/CX9EXaEwwg8
 
 
 #### Results:
