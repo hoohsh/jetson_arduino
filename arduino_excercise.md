@@ -121,3 +121,10 @@ finally:
         ser.close()
         print("[센서] 시리얼 포트 닫힘")
 ```
+
+#### Experiment Video:
+[Discord Alert System Video](https://github.com/user-attachments/assets/discord-alert.mp4)
+
+#### Results:
+- Sent alerts when CO2 exceeded thresholds (850 ppm, 1000 ppm).
+- Reset notifications when CO2 levels dropped below 700 ppm.
