@@ -45,21 +45,21 @@ The carbonation strength of four different soft drinks was measured by comparing
 A Discord-based alert system was implemented to notify users when CO2 levels exceed certain thresholds. The following Python script handles the integration.
 
 ```python
-# 디스코드 이산화탄소 경고 알림 코드입니다.
+# Discord Carbon Dioxide Warning Alert Code
 
 import serial
 import requests
 
-# 아두이노 시리얼 포트 설정
-SERIAL_PORT = '/dev/ttyUSB0'  # 아두이노가 연결된 포트 확인 후 설정
-BAUD_RATE = 9600  # 아두이노와 동일한 보드레이트 설정
+# Arduino serial port configuration
+SERIAL_PORT = '/dev/ttyUSB0'  # Set the port where the Arduino is connected
+BAUD_RATE = 9600  # Set the same baud rate as the Arduino
 
-# 임계값 설정
+# Threshold settings
 THRESHOLD_1 = 850
 THRESHOLD_2 = 1000
-RESET_THRESHOLD = 700  # 환기가 완료되었다고 알릴 농도 임계값
+RESET_THRESHOLD = 700  # Threshold to notify that ventilation is complete
 
-# 디스코드 웹훅 URL
+# Discord webhook URL
 DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/your_webhook_url_here'
 
 
@@ -70,14 +70,14 @@ class AlertManager:
         self.reset_alert_sent = False
 
     def reset_alerts(self):
-        """알림 상태 초기화"""
+        """Reset alert states"""
         self.alert_850_sent = False
         self.alert_1000_sent = False
         self.reset_alert_sent = False
 
 
 def send_discord_alert(message):
-    """디스코드로 알림 메시지를 전송합니다."""
+    """Send an alert message to Discord"""
     data = {"content": message}
     response = requests.post(DISCORD_WEBHOOK_URL, json=data)
     if response.status_code == 204:
@@ -87,45 +87,45 @@ def send_discord_alert(message):
 
 
 alert_manager = AlertManager()
-ser = None  # 초기값 설정
+ser = None  # Initialize variable
 
 try:
-    # 시리얼 포트 열기
+    # Open the serial port
     ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
     print("아두이노 연결 완료")
 
     while True:
         if ser.in_waiting > 0:
-            line = ser.readline().decode('utf-8').strip()  # 아두이노에서 데이터 읽기
+            line = ser.readline().decode('utf-8').strip()  # Read data from Arduino
             print(f"[아두이노 데이터] {line}")
 
             if line.startswith("CO2:"):
                 co2_value = int(line.split(":")[1])
                 print(f"[센서] 현재 CO2 농도: {co2_value} ppm")
 
-                # 임계값 확인 및 알림 전송 (한 번만 전송)
+                # Check thresholds and send alerts (only once per threshold crossing)
                 if co2_value > THRESHOLD_2 and not alert_manager.alert_1000_sent:
                     alert_message = f"[경고] CO2 농도가 {co2_value} ppm으로 임계값 1000 ppm을 초과했습니다!"
                     print(alert_message)
                     send_discord_alert(alert_message)
-                    alert_manager.alert_1000_sent = True  # 알림 상태 업데이트
+                    alert_manager.alert_1000_sent = True  # Update alert state
 
                 elif co2_value > THRESHOLD_1 and not alert_manager.alert_850_sent and not alert_manager.alert_1000_sent:
                     alert_message = f"[주의] CO2 농도가 {co2_value} ppm으로 임계값 850 ppm을 초과했습니다!"
                     print(alert_message)
                     send_discord_alert(alert_message)
-                    alert_manager.alert_850_sent = True  # 알림 상태 업데이트
+                    alert_manager.alert_850_sent = True  # Update alert state
 
-                # CO2 농도가 RESET_THRESHOLD 이하로 떨어질 경우
+                # If CO2 concentration falls below RESET_THRESHOLD
                 elif co2_value <= RESET_THRESHOLD:
                     if alert_manager.alert_850_sent or alert_manager.alert_1000_sent:
                         if not alert_manager.reset_alert_sent:
                             reset_message = f"[알림] CO2 농도가 {co2_value} ppm으로 환기가 완료되었습니다!"
                             print(reset_message)
                             send_discord_alert(reset_message)
-                            alert_manager.reset_alert_sent = True  # 환기 완료 알림 상태 업데이트
+                            alert_manager.reset_alert_sent = True  # Update ventilation complete alert state
 
-                # 값이 임계값 아래로 떨어지면 일반 알림 상태 초기화
+                # Reset general alert states if value rises above RESET_THRESHOLD
                 if co2_value > RESET_THRESHOLD:
                     alert_manager.reset_alert_sent = False
 
@@ -133,7 +133,7 @@ except Exception as e:
     print(f"[오류] {e}")
 
 finally:
-    if ser and ser.is_open:  # ser 변수가 정의되었는지 확인
+    if ser and ser.is_open:  # Check if the `ser` variable is defined
         ser.close()
         print("[센서] 시리얼 포트 닫힘")
 ```
