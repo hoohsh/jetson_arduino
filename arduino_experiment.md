@@ -5,7 +5,7 @@
 **Description**:  
 CO2 levels were measured for 1.5 hours during a lecture in a classroom. The graph below shows CO2 concentrations dropping sharply after ventilation was applied.
 
-![image](https://github.com/user-attachments/assets/e13605d3-1ee2-4103-8263-664a4abd2b41)
+![image](https://github.com/user-attachments/assets/64046fb1-83ee-4a81-8db3-b16cba02aa19)
 
 - In an empty room, CO2 levels remained stable at 700–900 ppm. However, levels increased significantly when people were present.
 - CO2 levels rose proportionally with the number of people in the room, but ventilation (10–20 minutes) caused a sharp decrease.
@@ -28,7 +28,7 @@ The carbonation strength of four different soft drinks was measured by comparing
 - **Results**:  
   The results were visualized as a bar chart for clarity:
 
-  ![image](https://github.com/user-attachments/assets/1f749428-d594-4aba-8156-0264e5bb9083)
+  ![image](https://github.com/user-attachments/assets/7c9d3eb5-5e02-46ad-8f74-2355f6f205d0)
 
   Based on the results, the CO2 change was observed in the following order:  
   **Coca-Cola Zero > Pepsi > Coca-Cola > Pepsi Zero**.  
