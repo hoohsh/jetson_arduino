@@ -28,7 +28,7 @@ The carbonation strength of four different soft drinks was measured by comparing
 - **Results**:  
   The results were visualized as a bar chart for clarity:
 
-  ![image](https://github.com/user-attachments/assets/7c9d3eb5-5e02-46ad-8f74-2355f6f205d0)
+  ![image](https://github.com/user-attachments/assets/2261f6b0-205d-45a4-b38c-9fb8d3f5ac0c)
 
   Based on the results, the CO2 change was observed in the following order:  
   **Coca-Cola Zero > Pepsi > Coca-Cola > Pepsi Zero**.  
